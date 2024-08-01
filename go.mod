@@ -1,8 +1,11 @@
-module github.com/bugloper/engineer-sh
+module engineer.sh
 
 go 1.22.5
 
-require github.com/labstack/echo/v4 v4.12.0
+require (
+	github.com/a-h/templ v0.2.747
+	github.com/labstack/echo/v4 v4.12.0
+)
 
 require (
 	github.com/labstack/gommon v0.4.2 // indirect

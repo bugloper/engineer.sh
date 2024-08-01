@@ -1,0 +1,3 @@
+
+g:
+	templ generate

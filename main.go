@@ -1,7 +1,7 @@
 package main
 
 import (
-	"net/http"
+	"engineer.sh/handlers"
 
 	"github.com/labstack/echo/v4"
 )
@@ -9,9 +9,8 @@ import (
 func main() {
 	e := echo.New()
 
-	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "Hello, World!")
-	})
+	userHandler := handlers.UserHandler{}
+	e.GET("/user", userHandler.HandlerUserListing)
 
 	e.Logger.Fatal(e.Start(":4000"))
 }
