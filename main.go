@@ -9,8 +9,8 @@ import (
 func main() {
 	e := echo.New()
 
-	userHandler := handlers.UserHandler{}
-	e.GET("/user", userHandler.HandlerUserListing)
+	rootHandler := handlers.RootHandler{}
+	e.GET("/", rootHandler.HandlerRootPage)
 
 	e.Logger.Fatal(e.Start(":4000"))
 }

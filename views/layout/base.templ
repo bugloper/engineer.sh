@@ -4,8 +4,23 @@ templ Base() {
 	<html>
 		<head></head>
 		<body>
-			Base Layout
-			{ children... }
+			<!-- Header -->
+			<header>
+				<h1>engineer.sh</h1>
+				<nav>
+					<a href="/">Home</a>
+					<a href="/about">About</a>
+					<a href="/contact">Contact</a>
+				</nav>
+			</header>
+			<!-- Main content -->
+			<main>
+				{ children... }
+			</main>
+			<!-- Footer -->
+			<footer>
+				<p>&copy; 2024 engineer.sh. All rights reserved.</p>
+			</footer>
 		</body>
 	</html>
 }
